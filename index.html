@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nawah | Software that powers your business</title>
+  <meta name="description" content="Nawah is a software company building mobile apps, cloud systems and AI solutions.">
+
+  <!-- Prevents a theme flash: applies the saved theme before first paint -->
+  <script>
+    try {
+      var t = localStorage.getItem('nawah-theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-bs-theme', t);
+    } catch (e) {}
+  </script>
+
+  <!-- Bootstrap 5 + Bootstrap Icons + fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-glass" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand" href="#top"><i class="bi bi-hexagon-fill"></i> Nawah</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle menu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#features">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <!-- Dark / Light toggle -->
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark / light mode" title="Toggle theme">
+          <i class="bi bi-moon-stars-fill icon-moon"></i>
+          <i class="bi bi-sun-fill icon-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero" id="top">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="pill hero-in" style="--d:0s"><span class="dot"></span> Now booking next quarter</span>
+          <h1 class="hero-title hero-in" style="--d:.1s">We write the code that <span class="grad-text">runs your business</span> from day one</h1>
+          <p class="lead hero-in" style="--d:.2s">An engineering team that designs and builds apps, cloud systems and AI solutions, and ships them ready to scale.</p>
+          <div class="d-flex flex-wrap gap-3 hero-in" style="--d:.3s">
+            <a href="#contact" class="btn btn-glow btn-lg"><i class="bi bi-rocket-takeoff-fill me-2"></i>Start your project</a>
+            <a href="#features" class="btn btn-outline-glow btn-lg"><i class="bi bi-grid-fill me-2"></i>Explore services</a>
+          </div>
+        </div>
+
+        <!-- Auto-typing terminal: the signature element of the page -->
+        <div class="col-lg-6 hero-in" style="--d:.4s">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span>
+              <span class="t-title">nawah — deploy</span>
+            </div>
+            <pre class="terminal-body"><code id="typed"></code><span class="caret"></span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Features ===== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>What we build for you</h2>
+        <p>Six services that cover the whole product journey, from idea to production.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal" style="--i:0">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-phone-fill"></i></div><h3>Mobile apps</h3><p>iOS and Android apps with smooth UX and steady performance on every device.</p></article>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" style="--i:1">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-cloud-fill"></i></div><h3>Cloud systems</h3><p>Secure cloud infrastructure that scales automatically as your users grow.</p></article>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" style="--i:2">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-cpu-fill"></i></div><h3>Artificial intelligence</h3><p>Models and automation that cut manual work and sharpen decisions.</p></article>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" style="--i:3">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-shield-lock-fill"></i></div><h3>Cybersecurity</h3><p>Vulnerability testing and data protection to international standards.</p></article>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" style="--i:4">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-window-stack"></i></div><h3>Web platforms</h3><p>Fast, responsive interfaces built on modern web technology.</p></article>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal" style="--i:5">
+          <article class="f-card"><div class="f-icon"><i class="bi bi-graph-up-arrow"></i></div><h3>Data analytics</h3><p>Dashboards that turn your numbers into clear decisions.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 reveal">
+          <h2 class="mb-3">A small team with a big impact</h2>
+          <p class="text-body-secondary mb-3">We started in 2016 with three engineers and one room. Today we work with startups and large enterprises across the region, with one rule: every line of code must serve a clear business goal.</p>
+          <ul class="check-list">
+            <li><i class="bi bi-check-circle-fill"></i> Short delivery cycles with a weekly demo</li>
+            <li><i class="bi bi-check-circle-fill"></i> Documented code that you fully own</li>
+            <li><i class="bi bi-check-circle-fill"></i> Support after launch</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6 reveal" style="--i:0"><div class="stat"><b data-count="150">0</b><span>+ projects delivered</span></div></div>
+            <div class="col-6 reveal" style="--i:1"><div class="stat"><b data-count="40">0</b><span>+ engineers</span></div></div>
+            <div class="col-6 reveal" style="--i:2"><div class="stat"><b data-count="99">0</b><span>% system uptime</span></div></div>
+            <div class="col-6 reveal" style="--i:3"><div class="stat"><b data-count="12">0</b><span>countries served</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>What our clients say</h2>
+        <p>Feedback from teams we built real products with.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 reveal" style="--i:0">
+          <figure class="t-card"><i class="bi bi-quote q"></i><blockquote>They delivered our delivery app two weeks early, and orders grew 40% in the first month.</blockquote><figcaption><span class="avatar">S</span><div><b>Sarah Collins</b><small>Product Lead, ShopPlus</small></div></figcaption></figure>
+        </div>
+        <div class="col-lg-4 reveal" style="--i:1">
+          <figure class="t-card"><i class="bi bi-quote q"></i><blockquote>They moved our systems to the cloud with zero downtime, and hosting costs dropped by half.</blockquote><figcaption><span class="avatar">O</span><div><b>Omar Nassar</b><small>IT Director, Logistik</small></div></figcaption></figure>
+        </div>
+        <div class="col-lg-4 reveal" style="--i:2">
+          <figure class="t-card"><i class="bi bi-quote q"></i><blockquote>The AI tool they built saves our support team thirty hours every week.</blockquote><figcaption><span class="avatar">N</span><div><b>Noor Sayed</b><small>COO, Digital Hub</small></div></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 reveal">
+          <div class="contact-box">
+            <h2 class="mb-1">Let's talk about your project</h2>
+            <p class="text-body-secondary mb-4">Tell us your idea and we'll reply within one business day.</p>
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label" for="name">Name</label><input class="form-control" id="name" required placeholder="Your full name"><div class="invalid-feedback">Enter your name.</div></div>
+                <div class="col-md-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" required placeholder="name@company.com"><div class="invalid-feedback">Enter a valid email address.</div></div>
+                <div class="col-12"><label class="form-label" for="msg">Message</label><textarea class="form-control" id="msg" rows="4" required placeholder="What do you want to build?"></textarea><div class="invalid-feedback">Write your message.</div></div>
+                <div class="col-12"><button class="btn btn-glow btn-lg w-100" type="submit"><i class="bi bi-send-fill me-2"></i>Send message</button></div>
+              </div>
+              <div class="form-ok" id="formOk" hidden><i class="bi bi-check-circle-fill"></i> Message sent. We'll be in touch soon.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <span class="brand"><i class="bi bi-hexagon-fill"></i> Nawah</span>
+      <small class="text-body-secondary">© 2026 Nawah Technologies. All rights reserved.</small>
+      <div class="social"><a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
